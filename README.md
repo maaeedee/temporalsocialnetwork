@@ -1,6 +1,6 @@
 # temporal social network
 
-This repository contains the implementation of the temporal graph, introduced by Kostakos:\\
+This repository contains the implementation of the temporal graph, introduced by Kostakos://
 Holme, P., & Saramäki, J. (2012). Temporal networks. Physics reports, 519(3), 97-125.
 
 ### Requirements:
