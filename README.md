@@ -1,4 +1,4 @@
-# temporal social network
+# Temporal social network (on the playground)
 
 This repository contains the implementation of the temporal graph, introduced by Kostakos:
 
