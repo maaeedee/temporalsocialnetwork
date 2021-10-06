@@ -25,9 +25,11 @@ resultpath = 'Results/'
 input_file = open(inputfile,"r")
 data = pd.read_csv(inputfile,header=0, sep=';')
 
-
+# additional 
+separator = ';'
 # Preprocessing
-preprocess(data, input_file)
+school =0 
+preprocess(data, input_file, separator, school)
     
 
 # DataFrame
@@ -44,8 +46,8 @@ normal_nodes=list(set([i.split('_', 1)[0] for i in nodes_list]))
 normal_nodes=sorted(normal_nodes, key=str.lower)
 
 # Creating the required data
-P = p_table(normal_nodes, Grph, resultpath)
-G = g_table(normal_nodes, Grph, resultpath)
-V = v_table(normal_nodes, Grph, resultpath)
+P = p_table(normal_nodes, Grph, resultpath, name='test')
+G = g_table(normal_nodes, Grph, resultpath, name='test')
+V = v_table(normal_nodes, Grph, resultpath, name='test')
 
 

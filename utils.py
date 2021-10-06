@@ -4,7 +4,7 @@ import pandas as pd
 
 
 # create P table 
-def p_table(normal_nodes, Grph, resultpath):
+def p_table(normal_nodes, Grph, resultpath, name):
     i = 0
 
     P=np.zeros((len(normal_nodes),len(normal_nodes)))
@@ -54,13 +54,13 @@ def p_table(normal_nodes, Grph, resultpath):
     Px=pd.DataFrame(Pi)
     Px['Pout']=(Pi.sum(1))/(Pi.count(axis=1)-1)
     Px.loc['Pin']=Pi.sum()/(Pi.count(axis=0)-1)
-    Px.to_csv(resultpath+"test_P_Matrix.csv")
+    Px.to_csv(resultpath+name+"_P_Matrix.csv")
     print('Matrix P is generated.')
     return Px
 
 
 
-def g_table (normal_nodes, G, resultpath):
+def g_table (normal_nodes, G, resultpath, name):
     G_i=np.zeros((len(normal_nodes),len(normal_nodes)))
     i=0
     m=0
@@ -102,11 +102,11 @@ def g_table (normal_nodes, G, resultpath):
     Gx=pd.DataFrame(Gi).copy()
     Gx['Gout']=(Gi.sum(1))/(Gi.count(axis=1)-1)
     Gx.loc['Gin']=Gi.sum()/(Gi.count(axis=0)-1)
-    Gx.to_csv(resultpath+"test_G_Matrix.csv")
+    Gx.to_csv(resultpath+name+"_G_Matrix.csv")
     print('Matrix G is generated.')
     return Gx
 
-def v_table(normal_nodes, G, resultpath):
+def v_table(normal_nodes, G, resultpath, name):
     V_i=np.zeros((len(normal_nodes),len(normal_nodes)))
     m=0
     n=0
@@ -144,6 +144,6 @@ def v_table(normal_nodes, G, resultpath):
     Vx=pd.DataFrame(Vi)
     Vx['Vout']=(Vx.sum(1)-1)/(len(normal_nodes)-1)
     Vx.loc['Vin']=(Vx.sum()-1)/(Vx.count(axis=0)-1)
-    Vx.to_csv(resultpath+"test_V_Matrix.csv")
+    Vx.to_csv(resultpath+name+"_V_Matrix.csv")
     print('Matrix V is generated.')
     return Vx
