@@ -7,7 +7,7 @@ Holme, P., & Saramäki, J. (2012). Temporal networks. Physics reports, 519(3), 9
 ### Requirements:
 - numpy 
 - networkx
-- 
+- pandas
 
 Step 1:
 The temporal graph is implemented and tested via the simple dataset that the paper has used. The same result is obtained.
