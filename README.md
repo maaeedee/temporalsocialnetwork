@@ -17,5 +17,7 @@ The simple data is located in the Data folder, and the `temporal_graph.py` use t
 
 Step 2: 
 The temporal graph is further adjusted to take the data from the schoolyard. The new implementation is in `main.py`:
+
+
 `python main.py --basicinfo=<path_basic_information>  --edgefile=<path_edge_file>   --numdata=<data_size> --resultpath=<path_result> --prefix=<prefix_output_file>`
 
