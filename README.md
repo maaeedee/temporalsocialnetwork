@@ -14,3 +14,6 @@ The temporal graph is implemented and tested via the simple dataset that the pap
 The simple data is located in the Data folder, and the `temporal_graph.py` use this file to create the temporal graph.
 
 `python temporal_graph.py`
+
+Step 2: 
+The temporal graph is further adjusted to take the data from the schoolyard. The new implementation is in `main.py`.
